@@ -27,9 +27,9 @@ function Cards() {
     return (
         <div className='container_cards'>
             {cities.length?
-                cities.map(city => {
+                cities.map((city, index) => {
                 return (
-                <div className='container_card'>
+                <div className='container_card' key={index}>
                     <div className='name_card'>
                         <p>{city.name}, {city.sys.country}</p>
                     </div>
@@ -51,8 +51,11 @@ function Cards() {
             )
             :null
             }
+            {show?null:null}
         </div>
+
     )
 }
 
 export default Cards
+
