@@ -34,13 +34,14 @@ function MedellinCard() {
         if(medellin.weather[0].main === 'Snow'){
             return <AcUnitIcon style={{'fontSize':'5rem'}}/>
         }
-        return <WbSunnyIcon/>
+        return <WbSunnyIcon style={{'fontSize':'5rem'}}/>
     }
   
     return (
         <>
         {medellin && show?
         <div className='container_medellin'>
+        <div className='subContainer_medellin'>
             <div className='section_one'>
                 <p>Current city</p>
                 <h1>{medellin.name}, {medellin.sys.country}</h1>
@@ -52,7 +53,7 @@ function MedellinCard() {
                     <h3>{medellin.weather[0].main}</h3>
                 </div>
             </div>
-            <div>
+            <div className='container_extraInfo'>
                 <div className='extra_info'>
                     <p>{Math.ceil(medellin.main.temp_min)} &#8451;</p>
                     <p>Temp. minimum</p>
@@ -71,6 +72,7 @@ function MedellinCard() {
                 </div>
             </div>
             </div>
+        </div>
         :null}
         </>
     )

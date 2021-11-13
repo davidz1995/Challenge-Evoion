@@ -125,32 +125,40 @@
     .container_medellin{
         width: 100%;
         text-align: left;
-        padding: 5em 4em 3em 4em;
-        height: max-content;
-        margin-bottom:0
+        padding: 0em 0em 0em 0em;
+        height: 100vh;
+        margin-bottom:0;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top:0
     }
+
+    .subContainer_medellin{
+        width: 80%;
+    }
+
      .section_one p{
         margin-top:3em;
         margin-bottom:.5em;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .section_one h1{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .subSection_temp h1{
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
     .section_two{
-        margin-top: 4em;
+        margin-top: 2em;
         margin-bottom: 4em;
     }
     .extra_info{
         margin-bottom: 3em;
     }
-    
     .extra_info p{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     }
