@@ -11,6 +11,7 @@ import '../styles/medellinCard.css'
 
 function MedellinCard() {
 
+    let difKelvinCelsius = 273.15;
     const [show, setShow] = useState(false)
 
     let medellin = useSelector(state => state.medellin)
@@ -49,25 +50,25 @@ function MedellinCard() {
             <div className='section_two'>
                 <div className='container_icon'>{ICON()}</div>
                 <div className='subSection_temp'>
-                    <h1>{Math.ceil(medellin.main.temp)} &#8451;</h1>
+                    <h1>{Math.ceil(medellin.main.temp-difKelvinCelsius)} &#8451;</h1>
                     <h3>{medellin.weather[0].main}</h3>
                 </div>
             </div>
             <div className='container_extraInfo'>
                 <div className='extra_info'>
-                    <p>{Math.ceil(medellin.main.temp_min)} &#8451;</p>
+                    <p>{Math.ceil(medellin.main.temp_min-difKelvinCelsius)} &#8451;</p>
                     <p>Temp. minimum</p>
                 </div>
                 <div className='extra_info'>
-                    <p>{Math.ceil(medellin.main.temp_max)} &#8451;</p>
+                    <p>{Math.ceil(medellin.main.temp_max-difKelvinCelsius)} &#8451;</p>
                     <p>Temp. maximun</p>
                 </div>
                 <div className='extra_info'>
-                    <p>{Math.ceil(medellin.main.feels_like)} &#8451;</p>
+                    <p>{Math.ceil(medellin.main.feels_like-difKelvinCelsius)} &#8451;</p>
                     <p>Feels like</p>
                 </div>
                 <div className='extra_info'>
-                    <p>{Math.ceil(medellin.main.humidity)} &#8451;</p>
+                    <p>{Math.ceil(medellin.main.humidity)} %</p>
                     <p>Humidity</p>
                 </div>
             </div>

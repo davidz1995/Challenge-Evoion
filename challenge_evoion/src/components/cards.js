@@ -11,7 +11,8 @@ import '../styles/cards.css'
 
 function Cards() {
 
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(false);
+    let difKelvinCelsius = 273.15 ;
     
     const cities = useSelector(state => state.cities)
 
@@ -42,7 +43,7 @@ function Cards() {
                         }
                         <div>
                             <p>{city.weather[0].main}</p>
-                            <h1>{Math.ceil(city.main.temp)} &#8451;</h1>
+                            <h1>{Math.ceil(city.main.temp-difKelvinCelsius)} &#8451;</h1>
                         </div>
                     </div>
                 </div>
