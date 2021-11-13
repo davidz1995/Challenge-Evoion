@@ -1,21 +1,23 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
+import {useState } from 'react'
 import { useSelector } from 'react-redux';
+import { store } from '../redux/store'
 
 function MedellinCard() {
 
-    const [state, setState] = useState(false)
+    const [show, setShow] = useState(false)
+
     let medellin = useSelector(state => state.medellin)
 
-    useEffect(() => {
-        setTimeout(() => {
-          setState(true)
-        }, 1000);
-      }, []);
+    const refresh = () => {
+        setShow(true)
+    }
+
+    store.subscribe(refresh)
   
     return (
         <>
-        {medellin && state?
+        {medellin && show?
         <div>
             <div>
                 <h3>Current city</h3>
