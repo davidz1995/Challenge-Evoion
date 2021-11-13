@@ -23,16 +23,16 @@ function MedellinCard() {
     
     const ICON = () => {
         if(medellin.weather[0].main === 'Clouds'){
-        return <CloudIcon/>
+        return <CloudIcon style={{'fontSize':'5rem'}}/>
         }
         if(medellin.weather[0].main === 'Rain'){
-        return <GrainIcon/>
+        return <GrainIcon style={{'fontSize':'5rem'}}/>
         }
         if(medellin.weather[0].main === 'Clear'){
-            return <WbSunnyIcon/>
+            return <WbSunnyIcon style={{'fontSize':'5rem'}}/>
         }
         if(medellin.weather[0].main === 'Snow'){
-            return <AcUnitIcon/>
+            return <AcUnitIcon style={{'fontSize':'5rem'}}/>
         }
         return <WbSunnyIcon/>
     }
@@ -46,7 +46,7 @@ function MedellinCard() {
                 <h1>{medellin.name}, {medellin.sys.country}</h1>
             </div>
             <div className='section_two'>
-                <div>{ICON()}</div>
+                <div className='container_icon'>{ICON()}</div>
                 <div className='subSection_temp'>
                     <h1>{Math.ceil(medellin.main.temp)} &#8451;</h1>
                     <h3>{medellin.weather[0].main}</h3>

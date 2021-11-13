@@ -35,10 +35,10 @@ function Cards() {
                     </div>
                     <div className='subContainer_card'>
                         {
-                            city.weather[0].main === 'Clouds'? <CloudIcon/> : 
-                            city.weather[0].main === 'Rain'? <GrainIcon/> :
-                            city.weather[0].main === 'Snow'? <AcUnitIcon/> :
-                            <WbSunnyIcon/>
+                            city.weather[0].main === 'Clouds'? <CloudIcon style={{'fontSize':'4em', 'marginRight':'.5em'}}/> : 
+                            city.weather[0].main === 'Rain'? <GrainIcon style={{'fontSize':'4em', 'marginRight':'.5em'}}/> :
+                            city.weather[0].main === 'Snow'? <AcUnitIcon style={{'fontSize':'4em', 'marginRight':'.5em'}}/> :
+                            <WbSunnyIcon style={{'fontSize':'4em', 'marginRight':'.5em'}}/>
                         }
                         <div>
                             <p>{city.weather[0].main}</p>
