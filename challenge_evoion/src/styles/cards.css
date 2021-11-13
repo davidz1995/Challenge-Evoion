@@ -78,9 +78,3 @@
         font-size: 3rem;
     }
   }
-
-  @media (min-width: 500px){
-    .container_cards{
-        flex-direction:column
-    }
-}

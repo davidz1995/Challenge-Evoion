@@ -41,13 +41,19 @@
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
   .App{
     flex-direction: column-reverse;
+    background-position:unset;
+    background-size:cover;
   }
   .panel{
     width:100%;
-    position:relative;
-    top:15em
+    position:absolute;
+    top:100vh;
+    background-image: url('../src/assets/globo-1.jpg');
+    background-size:initial;
+    margin-top: 0;
+    padding-top: 2em;
   }
 }
