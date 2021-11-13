@@ -1,6 +1,6 @@
 .input_search{
     width: 90%;
-    height: 2.5em;
+    height: 3em;
 }
 
 .input_search::placeholder{
@@ -8,3 +8,16 @@
     font-weight: 600;
     padding-left: 1em;
 }
+
+
+@media (max-width: 1440px){
+    .input_search{
+        height: 3.5em;
+    }
+  }
+
+  @media (min-width: 1900px){
+    .input_search{
+        height: 4em;
+    }
+  }

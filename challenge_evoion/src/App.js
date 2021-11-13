@@ -17,9 +17,11 @@ function App() {
 
   return (
     <div className="App">
-      <Search/>
+      <div className='panel'>
+        <Search/>
+        <Cards/>
+      </div>
       <MedellinCard/>
-      <Cards/>
     </div>
   );
 }

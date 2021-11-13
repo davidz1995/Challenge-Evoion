@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 import {useSelector} from 'react-redux'
 import { store } from '../redux/store'
+import '../styles/cards.css'
 
 function Cards() {
 
@@ -19,19 +20,19 @@ function Cards() {
     store.subscribe(refresh)
 
     return (
-        <div>
+        <div className='container_cards'>
             {cities.length?
                 cities.map(city => {
                 return (
-                <div>
-                    <div>
+                <div className='container_card'>
+                    <div className='name_card'>
                         <p>{city.name}, {city.sys.country}</p>
                     </div>
-                    <div>
+                    <div className='subContainer_card'>
                         <p>{city.weather[0].icon}</p>
                         <div>
                             <p>{city.weather[0].main}</p>
-                            <p>{city.main.temp}</p>
+                            <h1>{Math.ceil(city.main.temp)} &#8451;</h1>
                         </div>
                     </div>
                 </div>

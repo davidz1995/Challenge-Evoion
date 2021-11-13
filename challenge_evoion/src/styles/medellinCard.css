@@ -1,0 +1,151 @@
+.container_medellin{
+    background-color: rgba(255, 255, 255, 0.616);
+    backdrop-filter: blur(4px);
+    width: 20%;
+    text-align: left;
+    padding: 3em 2em 3em 2em;
+}
+
+.section_one p{
+    font-weight: 600;
+    margin-bottom: 2em;
+}
+
+.section_two{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+.subSection_temp h1{
+    font-size: 2.5rem;
+}
+
+.extra_info{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+}
+
+.extra_info p{
+    margin-right: 1em;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+@media (min-width: 1366px){
+    .section_one p{
+        margin-bottom: 3em;
+    }
+    .section_two{
+        margin-top: 3em;
+        margin-bottom: 2em;
+    }
+    .extra_info{
+        margin-top: 4em;
+    }
+    .container_medellin{
+        margin-left: 5px;
+    }
+  }
+  
+  @media (min-width: 1440px){
+
+    .container_medellin{
+        width: 30%;
+    }
+    .section_one p{
+        margin-top: 2.5em;
+        margin-bottom: 2em;
+        font-size: 1.3rem;
+    }
+    
+    .section_one h1{
+        font-size: 2.4rem;
+    }
+
+    .subSection_temp h1{
+        font-size: 3.5rem;
+    }
+    .section_two{
+        margin-top: 4em;
+        margin-bottom: 3em;
+    }
+    .container_medellin{
+        margin-left: 7px;
+    }
+    .extra_info{
+        margin-top: 4em;
+    }
+    
+    .extra_info p{
+        font-size: 1.3rem;
+    }
+  }
+  
+  @media (min-width: 1900px){
+    .container_medellin{
+        width: 25%;
+    }
+    .section_one p{
+        margin-top: 3em;
+        margin-bottom: 2.5em;
+        font-size: 1.8rem;
+    }
+    
+    .section_one h1{
+        font-size: 3.5rem;
+    }
+
+    .subSection_temp h1{
+        font-size: 4.5rem;
+    }
+    .section_two{
+        margin-top: 4.5em;
+        margin-bottom: 3.5em;
+    }
+    .container_medellin{
+        margin-left: 7px;
+    }
+    .extra_info{
+        margin-top: 5em;
+    }
+    
+    .extra_info p{
+        font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 500px){
+    .container_medellin{
+        width: 100%;
+        text-align: left;
+        padding: 5em 4em 3em 4em;
+        height: max-content;
+        margin-bottom:-12em
+    }
+     .section_one p{
+        margin-bottom: 1em;
+        font-size: 2rem;
+    }
+    
+    .section_one h1{
+        font-size: 3rem;
+    }
+
+    .subSection_temp h1{
+        font-size: 4.5rem;
+    }
+    .section_two{
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+    .extra_info{
+        margin-bottom: 3em;
+    }
+    
+    .extra_info p{
+        font-size: 1.5rem;
+    }
+    }
