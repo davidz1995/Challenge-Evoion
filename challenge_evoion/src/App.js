@@ -1,16 +1,18 @@
 import './App.css';
 import {useState, useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux';
-import { getByName } from './redux/actions/actions';
+import { getByName, getMedellin } from './redux/actions/actions';
 
 function App() {
-
-  const CITIES = useSelector(state => state.cities)
-  let medellin = CITIES.find(e => e.name === 'Medellín')
-
+  
+  let medellin = useSelector(state => state.medellin)
   const dispatch = useDispatch()
 
   const [name, setName] = useState('')
+
+  useEffect(() => {
+      dispatch(getMedellin())
+    },[dispatch]);
 
   let handleChange = (e) => {
     setName(e.target.value)
@@ -19,17 +21,16 @@ function App() {
   let handleClick = (e) => {
     e.preventDefault()
     dispatch(getByName(name))
-    console.log(medellin)
   }
-
-  useEffect(() => {
-    dispatch(getByName('Medellin'))
-   },[dispatch]);
 
   return (
     <div className="App">
      <input type='text' onChange={handleChange}/>
      <button onClick={handleClick}>Send</button>
+     {medellin?
+     <h1>{medellin.name}</h1>
+     :null
+     }
     </div>
   );
 }

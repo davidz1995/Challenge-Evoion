@@ -1,4 +1,4 @@
-import { GET_BYNAME} from "./actionTypes";
+import { GET_BYNAME, GET_MEDELLIN} from "./actionTypes";
 import axios from "axios";
 
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -14,6 +14,15 @@ export const getByName = (name) => {
     } 
   }
 }
+
+export const getMedellin = () => {
+    return async (dispatch) => {
+        const response = await axios.get(`${API_URL}Medellín&appid=${API_KEY}`)
+        let error = [{name: 'Not found'}]
+        if(response.status === 200) dispatch({type: GET_MEDELLIN, payload: response.data})
+        if(response.status === 404) dispatch({type: GET_MEDELLIN, payload: error})
+    }
+  }
 
 
 

@@ -1,10 +1,11 @@
-import { GET_BYNAME } from "./actions/actionTypes";
+import { GET_BYNAME, GET_MEDELLIN } from "./actions/actionTypes";
 
 let cities = []
 
 const initialState = {
     getByName: [],
-    cities: cities
+    cities: cities,
+    medellin: []
   };
 
 const reducer = (state = initialState, action) => {
@@ -15,6 +16,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         getByName: action.payload
       }
+    case GET_MEDELLIN :
+        return {
+            ...state,
+            medellin: action.payload
+        }
       default:
         return {
           ...state
