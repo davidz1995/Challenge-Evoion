@@ -11,5 +11,4 @@ Prueba técnica proceso de selección en Evoion, realizada con ReactJs.
   - REACT_APP_API_KEY = aecc6cb8988ab0b7eccfc048c4b887e5
 - [ ] Ejecutar $ npm start y estaría levantado el proyecto.
 
-- [ ] El proyecto está deployado en el siguiente link 
 
