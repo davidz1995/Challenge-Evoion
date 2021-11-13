@@ -3,6 +3,8 @@ import {useState} from 'react'
 import { getByName } from '../redux/actions/actions'
 import { useDispatch } from 'react-redux'
 
+import '../styles/search.css'
+
 function Search() {
 
     const dispatch = useDispatch()
@@ -13,15 +15,17 @@ function Search() {
         setCity(e.target.value)
     }
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault();
         dispatch(getByName(city));
         setCity('')
     }
 
     return (
         <div>
-            <input type='text' onChange={handleChange}/>
-            <button onClick={handleClick}>send</button>
+        <form onSubmit={handleClick}>
+            <input type='text' onChange={handleChange} className='input_search' value={city} placeholder={'Search other cities...'}/>
+        </form>
         </div>
     )
 }

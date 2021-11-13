@@ -1,0 +1,10 @@
+.input_search{
+    width: 90%;
+    height: 2.5em;
+}
+
+.input_search::placeholder{
+    color: rgba(0, 17, 43, 0.788);
+    font-weight: 600;
+    padding-left: 1em;
+}
