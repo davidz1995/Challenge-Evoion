@@ -4,7 +4,7 @@ let cities = []
 
 const initialState = {
     getByName: [],
-    cities: cities,
+    cities,
     medellin: []
   };
 

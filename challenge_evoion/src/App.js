@@ -1,36 +1,20 @@
 import './App.css';
-import {useState, useEffect} from 'react'
-import {useSelector, useDispatch} from 'react-redux';
-import { getByName, getMedellin } from './redux/actions/actions';
+import { useEffect } from 'react';
+import MedellinCard from './components/medellinCard';
+import { getMedellin } from './redux/actions/actions';
+import { useDispatch } from 'react-redux'
 
 function App() {
-  
-  let medellin = useSelector(state => state.medellin)
+
   const dispatch = useDispatch()
-
-  const [name, setName] = useState('')
-
+  
   useEffect(() => {
-      dispatch(getMedellin())
-    },[dispatch]);
-
-  let handleChange = (e) => {
-    setName(e.target.value)
-  }
-
-  let handleClick = (e) => {
-    e.preventDefault()
-    dispatch(getByName(name))
-  }
+    dispatch(getMedellin())
+  },[dispatch]);
 
   return (
     <div className="App">
-     <input type='text' onChange={handleChange}/>
-     <button onClick={handleClick}>Send</button>
-     {medellin?
-     <h1>{medellin.name}</h1>
-     :null
-     }
+      <MedellinCard/>
     </div>
   );
 }
