@@ -1,7 +1,12 @@
-import React from 'react'
-import {useState} from 'react'
+import React, {useState} from 'react'
 import {useSelector} from 'react-redux'
 import { store } from '../redux/store'
+//Icons
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import CloudIcon from '@mui/icons-material/Cloud';
+import GrainIcon from '@mui/icons-material/Grain';
+//CSS
 import '../styles/cards.css'
 
 function Cards() {
@@ -29,7 +34,12 @@ function Cards() {
                         <p>{city.name}, {city.sys.country}</p>
                     </div>
                     <div className='subContainer_card'>
-                        <p>{city.weather[0].icon}</p>
+                        {
+                            city.weather[0].main === 'Clouds'? <CloudIcon/> : 
+                            city.weather[0].main === 'Rain'? <GrainIcon/> :
+                            city.weather[0].main === 'Snow'? <AcUnitIcon/> :
+                            <WbSunnyIcon/>
+                        }
                         <div>
                             <p>{city.weather[0].main}</p>
                             <h1>{Math.ceil(city.main.temp)} &#8451;</h1>

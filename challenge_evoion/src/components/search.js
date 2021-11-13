@@ -1,8 +1,7 @@
-import React from 'react'
-import {useState} from 'react'
+import React, {useState} from 'react'
 import { getByName } from '../redux/actions/actions'
 import { useDispatch } from 'react-redux'
-
+//CSS
 import '../styles/search.css'
 
 function Search() {

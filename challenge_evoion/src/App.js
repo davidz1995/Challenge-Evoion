@@ -1,9 +1,10 @@
 import './App.css';
 import { useEffect } from 'react';
-import MedellinCard from './components/medellinCard';
-import Search from './components/search';
 import { getByName, getMedellin } from './redux/actions/actions';
 import { useDispatch } from 'react-redux'
+//Components
+import MedellinCard from './components/medellinCard';
+import Search from './components/search';
 import Cards from './components/cards';
 
 function App() {

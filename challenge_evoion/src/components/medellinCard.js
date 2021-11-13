@@ -1,7 +1,12 @@
-import React from 'react'
-import {useState } from 'react'
+import React, {useState} from 'react'
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store'
+//Icons
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import CloudIcon from '@mui/icons-material/Cloud';
+import GrainIcon from '@mui/icons-material/Grain';
+//CSS
 import '../styles/medellinCard.css'
 
 function MedellinCard() {
@@ -15,6 +20,22 @@ function MedellinCard() {
     }
 
     store.subscribe(refresh)
+    
+    const ICON = () => {
+        if(medellin.weather[0].main === 'Clouds'){
+        return <CloudIcon/>
+        }
+        if(medellin.weather[0].main === 'Rain'){
+        return <GrainIcon/>
+        }
+        if(medellin.weather[0].main === 'Clear'){
+            return <WbSunnyIcon/>
+        }
+        if(medellin.weather[0].main === 'Snow'){
+            return <AcUnitIcon/>
+        }
+        return <WbSunnyIcon/>
+    }
   
     return (
         <>
@@ -25,7 +46,7 @@ function MedellinCard() {
                 <h1>{medellin.name}, {medellin.sys.country}</h1>
             </div>
             <div className='section_two'>
-                <div>{medellin.weather[0].icon}</div>
+                <div>{ICON()}</div>
                 <div className='subSection_temp'>
                     <h1>{Math.ceil(medellin.main.temp)} &#8451;</h1>
                     <h3>{medellin.weather[0].main}</h3>
